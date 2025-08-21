@@ -1,0 +1,4 @@
+#ifndef _MAGNETOMETER_HPP
+#define _MAGNETOMETER_HPP
+
+#endif // _MAGNETOMETER_HPP
