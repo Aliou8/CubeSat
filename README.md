@@ -8,12 +8,12 @@ La communication entre le simulateur et l’ESP32 se fait via le **protocole TCP
 -  Simulation de génération et transmission de données d’un CubeSat  
 -  Réception et affichage des données sur un ESP32  
 -  Visualisation en temps réel sur écran LCD  
--  Communication via TCP pour un transfert fiable  
+-  Communication via TCP 
 
 ##  Composants
 
-1. **CubeSat Simulator** – Application en C++ (simulation et envoi des données)  
-2. **ESP32 Receiver** – Firmware basé sur Arduino ou ESP-IDF (réception et affichage)  
+1. **CubeSat** – Application en C++ (simulation et envoi des données)  
+2. **ESP32 Receiver** – Firmware basé sur  ESP-IDF (réception et affichage)  
 3. **LCD Display** – Interface pour afficher les données en direct  
 
 ##  Installation & Configuration
@@ -21,7 +21,7 @@ La communication entre le simulateur et l’ESP32 se fait via le **protocole TCP
 ### Prérequis
 
 - Un environnement de développement C++ (g++ ou équivalent)  
-- **Arduino IDE** ou **ESP-IDF** configuré pour l’ESP32  
+- **ESP-IDF** configuré pour l’ESP32  
 - Une connexion réseau (Wi-Fi ou Ethernet) pour la communication TCP  
 
 ### Étapes d’installation
@@ -46,4 +46,5 @@ La communication entre le simulateur et l’ESP32 se fait via le **protocole TCP
 2. Vérifier que l’ESP32 est bien connecté au réseau.
 3. Les données générées par le simulateur apparaîtront automatiquement sur l’écran LCD connecté à l’ESP32.
 4. Assurez-vous d’avoir correctement défini les paramètres de connexion Wi-Fi dans le code de l’ESP32.
+
 
