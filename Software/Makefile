@@ -5,11 +5,12 @@ INCLUDE_DIR = include
 BUILD_DIR = build
 OBJ_DIR = $(BUILD_DIR)/obj
 BIN_DIR = $(BUILD_DIR)/bin
+TES_DIR = test
 
 # Compilateurs et options
 CXX = g++
 CC = gcc
-CXXFLAGS = -Wall -Wextra -g -O2 -std=c++20
+CXXFLAGS = -Wall -Wextra -g -O2 -std=c++20 
 C_FLAGS = -Wall -Wextra -g -O2
 LDFLAGS = -lm -lws2_32 
 
@@ -45,9 +46,10 @@ clean:
 	@rm -rf $(BUILD_DIR)
 	@echo "Build directory cleaned."
 
+ARGS ?=
 # Exécution du projet
 run: all
 	@echo "Running the project..."
-	@./$(BIN_DIR)/$(PROJET_NAME)
+	@./$(BIN_DIR)/$(PROJET_NAME) $(ARGS)
 	
-
+    

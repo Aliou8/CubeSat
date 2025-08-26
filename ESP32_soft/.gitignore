@@ -1,0 +1,44 @@
+# Fichiers de build
+/build/
+*.elf
+*.bin
+*.hex
+*.map
+*.d
+*.o
+*.a
+*.so
+*.exe
+*.out
+
+# Fichiers temporaires
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# Fichiers générés par l'IDE
+.vscode/
+.idea/
+*.code-workspace
+*.sublime*
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers de configuration utilisateur
+*.user
+*.workspace
+
+
+# Fichiers Python (si utilisation d'outils python)
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers de components
+components/
+managed_components/
