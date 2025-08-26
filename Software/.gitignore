@@ -1,16 +1,3 @@
-# Fichiers de build
-/build/
-*.elf
-*.bin
-*.hex
-*.map
-*.d
-*.o
-*.a
-*.so
-*.exe
-*.out
-
 # Fichiers temporaires
 *.log
 *.tmp
