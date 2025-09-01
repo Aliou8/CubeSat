@@ -47,4 +47,15 @@ La communication entre le simulateur et l’ESP32 se fait via le **protocole TCP
 3. Les données générées par le simulateur apparaîtront automatiquement sur l’écran LCD connecté à l’ESP32.
 4. Assurez-vous d’avoir correctement défini les paramètres de connexion Wi-Fi dans le code de l’ESP32.
 
+###Résultats
+Communication Client-Serveur
+<p align="center">
+  <img src="images/client.png" width="300"/>
+  <img src="images/server.png" width="300"/>
+</p>
+Interface graphique sur ESP32
+<p align="center">
+  <img src="images/imgFF.png" width="600"/>
+</p>
+
 
