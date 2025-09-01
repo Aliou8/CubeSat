@@ -51,13 +51,14 @@ La communication entre le simulateur et l’ESP32 se fait via le **protocole TCP
 Communication Client-Serveur
 <p align="center">
   <img src="RSC/client.png" width="300"/>
-  <img src="RSC/server.png" width="600"/>
+  <img src="RSC/server.png" width="700"/>
 </p>
 Interface graphique sur ESP32
 <p align="center">
   <img src="RSC/imgFF.JPG" width="300"/>
 </p>
 [▶️ Voir la vidéo](https://github.com/Aliou8/CubeSat/raw/main/RSC/video.mp4)
+
 
 
 
