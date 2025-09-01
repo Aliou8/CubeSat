@@ -50,12 +50,14 @@ La communication entre le simulateur et l’ESP32 se fait via le **protocole TCP
 ###Résultats
 Communication Client-Serveur
 <p align="center">
-  <img src="images/client.png" width="300"/>
-  <img src="images/server.png" width="300"/>
+  <img src="RSC/client.png" width="300"/>
+  <img src="RSC/server.png" width="300"/>
 </p>
 Interface graphique sur ESP32
 <p align="center">
-  <img src="images/imgFF.png" width="600"/>
+  <img src="RSC/imgFF.png" width="600"/>
 </p>
+
+
 
 
