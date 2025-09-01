@@ -17,7 +17,7 @@ status_t init_socket(const char* server_ip, int server_port, SOCKET* sock){
     server_addr.sin_addr.s_addr = inet_addr(server_ip);
 
     if(connect(*sock, (sockaddr*)&server_addr, sizeof(server_addr)) == SOCKET_ERROR){
-        cerr << "[CLIENT] Failed to connect to server: " << WSAGetLastError() << endl;
+        cerr << "[CLIENT] Failed to connect to server: "<< server_ip << " Error: " << WSAGetLastError() << endl;
         closesocket(*sock);
         WSACleanup();
         return STATUS_ERROR;
@@ -35,7 +35,7 @@ status_t send_data(SOCKET sock, const void* data, size_t size){
         WSACleanup();
         return STATUS_ERROR;
     }
-    cout << "[CLIENT] Sent " << sent_bytes << " bytes of data successfully." << endl;
+    cout << "[CLIENT] Sent " << sent_bytes << " bytes." << endl;
     return STATUS_OK;
 }
 

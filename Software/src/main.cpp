@@ -1,5 +1,14 @@
 #include <iostream>
-#include <winsock2.h>
+#ifdef _WIN32
+  #include <winsock2.h>
+  #include <ws2tcpip.h>
+#else
+  #include <sys/socket.h>
+  #include <arpa/inet.h>
+  #include <netinet/in.h>
+  #include <unistd.h>
+#endif
+
 #include <thread>
 #include <chrono>
 #include <semaphore.h>
@@ -38,7 +47,6 @@ int main(int argc, char const *argv[])
     const char* SERVER_IP = argv[1];
     int SERVER_PORT = stoi(argv[2]);
     if (init_socket(SERVER_IP, SERVER_PORT, &sock)!= STATUS_OK) {
-        cerr << "[CLIENT] Erreur lors de l'initialisation du socket" << endl;
         return 1;
     }
 
@@ -76,7 +84,7 @@ int main(int argc, char const *argv[])
         hex_header_t bmpHeader = {MessageType::MSG_BMP, bmpSize};
         send_data(sock, &bmpHeader, sizeof(bmpHeader));
         send_data(sock, rxBuffer, bmpSize);
-       /* this_thread::sleep_for(chrono::seconds(1));
+        this_thread::sleep_for(chrono::seconds(1));
         // Sérialise et envoie les données IMU
         uint8_t imuSize = imu_serialize_data(&imuData, rxBuffer);
         hex_header_t imuHeader = {MessageType::MSG_IMU, imuSize};
@@ -115,7 +123,7 @@ int main(int argc, char const *argv[])
         send_data(sock, &nbSatHeader, sizeof(nbSatHeader));
         send_data(sock, &nbSatellites, sizeof(nbSatellites));
         // Attendre 1 seconde avant la prochaine acquisition
-        this_thread::sleep_for(chrono::seconds(1));*/
+        this_thread::sleep_for(chrono::seconds(1));
     }
     // Deinitialise le socket pour le serveur
     if (deinit_socket(&sock)!= STATUS_OK) {

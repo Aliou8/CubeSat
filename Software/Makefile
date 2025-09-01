@@ -12,7 +12,11 @@ CXX = g++
 CC = gcc
 CXXFLAGS = -Wall -Wextra -g -O2 -std=c++20 
 C_FLAGS = -Wall -Wextra -g -O2
-LDFLAGS = -lm -lws2_32 
+LDFLAGS = -lm 
+# Pour Windows, ajouter la bibliothèque ws2_32 pour le support des sockets
+ifeq ($(OS),Windows_NT)
+	LDFLAGS += -lws2_32
+endif
 
 # Fichiers sources et objets
 # On utilise wildcard pour trouver tous les fichiers .cpp et .c dans le dossier src
