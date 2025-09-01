@@ -55,9 +55,10 @@ Communication Client-Serveur
 </p>
 Interface graphique sur ESP32
 <p align="center">
-  <img src="RSC/imgFF.jpg" width="300"/>
+  <img src="RSC/imgFF.JPG" width="300"/>
 </p>
 [▶️ Voir la vidéo](https://github.com/Aliou8/CubeSat/raw/main/RSC/video.mp4)
+
 
 
 
